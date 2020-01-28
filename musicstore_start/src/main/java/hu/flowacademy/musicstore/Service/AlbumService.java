@@ -26,6 +26,7 @@ public class AlbumService {
         if (album.getTitle()== null || album.getTitle()== "" && album.getCount() < 1)   {
             throw new ValidationException("Fill out the all fields and cont must be 1 or more");
         }
+
         return albumRepo.save(album);
     }
 
