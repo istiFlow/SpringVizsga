@@ -10,5 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ArtistDTO {
 
+    private String firstName;
+    private String lastName;
 
 }
