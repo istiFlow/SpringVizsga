@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
+@NoArgsConstructor
+@AllArgsConstructor
 public class AlbumDTO {
     private String title;
     private Long count;

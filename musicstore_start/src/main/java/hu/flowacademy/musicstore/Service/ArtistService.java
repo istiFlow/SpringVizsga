@@ -1,8 +1,10 @@
 package hu.flowacademy.musicstore.Service;
 
 import hu.flowacademy.musicstore.Exceptions.ValidationException;
+import hu.flowacademy.musicstore.Model.Album;
 import hu.flowacademy.musicstore.Model.Artist;
 import hu.flowacademy.musicstore.Repository.ArtistRepo;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +19,6 @@ public class ArtistService {
 
     @Autowired
     ArtistRepo artistRepo;
-
     //create
     public Artist createArtist(Artist artist) {
         if (StringUtils.isEmpty(artist.getFirstName()) && StringUtils.isEmpty(artist.getLastName()) || (artist.getFirstName() == null || artist.getLastName()== null))   {
